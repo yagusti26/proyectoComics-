@@ -1,0 +1,245 @@
+/* Estilos generales */
+
+/* MOBILE FIRST */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+nav ul {
+    list-style-type: none;
+    display: none;
+}
+
+nav ul a {
+    display: block;
+    background-color: darkred;
+    padding: 20px;
+    font-size: 17px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ece4e4;
+    transition: color 2s ease,background 2s ease,padding 2s ease;
+}
+
+nav ul a:hover {
+    background: #474747;
+    color: #e0e0ce;
+    padding-left: 30px;
+}
+
+.nav-container img {
+    width: 100px;
+    align-self: center;
+}
+
+.nav-container {
+    padding: 0 20px;
+    background:#0d1317;
+    border-bottom: 3px solid #070707;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    margin: 7px;
+    background: #c0adad;
+}
+
+.btn {
+    padding: 2px;
+    display: inline-block;
+    border: 2px solid #b89d9d;
+    align-self: center;
+}
+
+header {
+    min-height: 100vh;
+    background: brown;
+}
+
+
+/* FLEXBOX */
+nav  {
+    flex: 0 0 auto;
+}
+
+.banner {
+    flex: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: url("/imgs/hellboy.jpg");
+    background-repeat: no-repeat;
+}
+
+.banner-center {
+    margin-top: 700px;
+}
+.banner h1 {
+    font-family: "Bangers", sans-serif;
+    font-size: 88px;
+    text-transform: uppercase;
+    color: #fff;
+}
+.banner h3 {
+    text-transform: capitalize;
+    font-size: 20px;
+    color: #fff;
+}
+.banner-icons {
+    padding: 0px;
+}
+.banner-icons a {
+    display: inline-block;
+    font-size: 30px;
+    padding: 5px 10px;
+    margin:  10px;
+    border-radius: 50%;
+    color: seagreen;
+    transition: color 1s ease, transform 1s ease;
+}
+.banner-icons a:hover {
+    color: rgb(238, 248, 242);
+    transform: translateY(-10px);
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+
+
+/* LOGO */ 
+.logo {
+  border: 1px whitesmoke; 
+}
+
+.logo {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+  }
+
+  /* KEYFRAMES LOGO */
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+
+/* SERVICES */
+.services {
+    min-height: 80vh;
+    background: url("/imgs/hell.jpeg")center/cover fixed no-repeat;
+    display: flex;
+    align-items: center;
+}
+.service {
+    color: #f5f3f5;
+    display: flex;
+    margin: 40px;
+}
+.service-icon {
+    align-self: center;
+    font-size: 30px;
+    margin-right: 20px;
+    padding: 20px;
+    border: 3px solid #f5f3f5;
+    border-radius: 50%;
+}
+
+.service-text h3 {
+    text-transform: uppercase;
+}
+.service-text p {
+    line-height: 1.5;
+    margin-top: 5px;
+}
+
+/* quienes somos section */
+.about {
+    min-height: 100vh;
+    padding: 100px 0;
+    background: url("/imgs/flames.jpeg")center/cover fixed no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-card {
+    background: rgba(136, 115, 115, 0.6);
+    text-align: center;
+    padding: 60px 40px;
+}
+.about-card h3 {
+    font-size: 40px;
+    text-transform: capitalize;
+}
+.about-card img {
+    
+    margin: 20px 0;
+}
+.about-card p {
+    line-height: 2;
+}
+
+/* footer */
+footer {
+    background: #0d1317;
+    padding: 60px 0;
+    text-align: center;
+}
+footer p {
+    color: #f5f3f5;
+    font-size: 20px;
+}
+
+/* TABLETS */
+@media screen and (min-width:776px) {
+    .nav-container {
+        display: none;
+    }
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background: rgba(13, 19, 23, 0.8);
+    }
+    nav ul a {
+        background: transparent;
+    }
+    nav ul a:hover {
+        background: transparent;
+        padding-left: 20px;
+    }
+
+
+    /* quienes somos */
+    .about-card {
+        max-width: 50%;
+        border-radius: 30px;
+    }
+    .about-card p {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+}
+
